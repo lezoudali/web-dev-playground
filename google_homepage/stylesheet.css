@@ -1,0 +1,111 @@
+* {
+	font-family: arial, sans-serif;
+	font-size: small;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+div {
+	position: absolute;
+	width: 100%;
+	margin: 0 ; padding: 0;
+
+}
+
+#top-nav {
+	top: -15px;
+
+}
+
+#top-nav ul {
+	float: right;
+}
+
+#apps-img {
+	position: relative; top: 4px;
+
+}
+
+#notification-img {
+	position: relative; top: 8px;
+}
+
+#user-img {
+	position: relative; top: 15px;
+}
+
+#share {
+	padding: 5px 12px;
+	background: #f1f1f1;
+	border-radius: 3px;
+}
+#search {
+	padding: 12px;
+	top: 200px;
+}
+
+#search-bar {
+	display: block;
+	margin: 0 auto;
+	position: relative; top: 12px;
+	width: 600px; height: 25px;
+}
+
+center {
+	position: relative;
+	top: 25px;
+
+}
+
+button {
+	text-align: center;
+	padding: 5px;
+	background-color: #f1f1f1;
+	border: 1px solid #dcdcdc;
+	border-radius: 2px;
+	margin-left: 10px;
+}
+
+
+#search img {
+	display: block;
+	margin: 0 auto;
+}
+
+#bottom-nav {
+	clear: both;
+	margin: 0; padding:0;
+	max-width: 100%;
+	clear: both;
+	bottom:0;
+	background: #f1f1f1;
+
+}
+
+
+
+li {
+	margin-left: 15px;
+	display: inline-block;
+	list-style: none;
+}
+
+
+#bottom-right {
+	float: right;
+	padding-right: 15px;
+
+}
+
+#bottom-left {
+	float: left;
+	right: 15px;
+}
+
+
+
+
+
+
+

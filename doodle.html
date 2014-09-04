@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sketch</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<style type="text/css">
+			* {
+				font-family: Verdana;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+
+			var width = 20; var flag = false; var color = "blue";
+
+			$(document).ready(function() {
+
+				$("body").prepend("<header><h2>Sketch Pad</h2></header>");
+				$("header").append("<p>move your mouse over the squares to doodle!</p>");
+				$("body").prepend("<div id='container'></div>");
+				$("#container").prepend("<center><button onclick='newGrid(); return false'>New Grid</button></center>");
+				$("center").append("<button onclick='blue(); return false' style='background:blue'>Blue</button>");
+				$("center").append("<button onclick='red(); return false' style='background:red'>Red</button>");
+				$("center").append("<button onclick='white(); return false' style='background:white'>White</button>");
+				$("center").append("<button onclick='yellow(); return false' style='background:yellow'>Yellow</button>");
+				$("center").append("<button onclick='green(); return false' style='background:green'>Green</button>");
+				$("center").append("<button onclick='random(); return false'>Random</button>");
+
+				newGrid();
+
+				$("li").mouseover(function() {
+					$(this).css("backgroundColor", color);
+				})
+			})
+
+			function newGrid() {
+				while (flag){
+					width = parseInt(prompt("Enter New Width (<=40): "));
+					if (width <= 40) {
+						flag = false;
+					}
+				}
+
+				flag = true;
+
+				$("ul").remove();
+				for (var i = 0; i<width; i++){
+					$("#container").append("<ul></ul>")
+				}
+				for (var i = 0; i<width; i++){
+					$("ul").append("<li></li>")
+				}
+
+				$("li").css({
+					display: "inline-block",
+					width: "15px", height: "15px",
+					border: "1px solid black",
+					margin: "2px",
+				})
+
+				$("ul").css({
+					margin: "0", 
+					position: "relative", 
+				})
+
+				$("body").css({
+					margin: '0',
+					padding: '0'
+				})
+
+				$("button").css({
+					display: "inline-block",
+					width: "100px", height: "25px",
+					marginRight: "8px", marginLeft: "8px",
+					marginBottom: "10px",
+					fontSize: "80%"
+
+				});
+
+				$("#container").css({
+					width: "90%", 
+					margin: "0 auto", padding: "10px", marginTop: "80px",
+					backgroundColor: "#F1F1F1",
+					textAlign: "center"
+				})
+				$("li").mouseover(function() {
+					$(this).css("backgroundColor", color);
+				})
+				$("center").css({
+					position: "relative", left: "20px"
+				})
+				$("header").css({
+					width: "800px",
+					margin: "0 auto", padding: "0",
+					position: "absolute", top: "0", left: "260px", 
+					textAlign: "center", color: "#000080"
+				})
+
+				$("p").css({
+					width: "800px",
+					margin: "0 auto", padding: "0",
+				})
+				$("h2").css({
+					width: "800px",
+					margin: "10px auto", padding: "0",
+				})
+			}
+
+			function getRandomColor() {
+			    var letters = '0123456789ABCDEF'.split('');
+			    var color = '#';
+			    for (var i = 0; i < 6; i++ ) {
+			        color += letters[Math.floor(Math.random() * 16)];
+			    }
+			    return color;
+			}
+
+			function blue() { color = "blue"}
+			function green() { color = "green"}
+			function yellow() { color = "yellow"}
+			function red() { color = "red"}
+			function white() { color = "white"}
+			function random() { color = getRandomColor();}
+
+
+
+		</script>
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

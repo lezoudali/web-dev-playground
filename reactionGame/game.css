@@ -1,0 +1,42 @@
+* {
+	font-family: Verdana, sans-serif;
+	text-align: center;
+}
+
+#container {
+	width: 800px; height: 600px;
+	margin: 0px auto;
+}
+
+
+h1 { margin-bottom: 0px; }
+p { margin-top: 0px; }
+
+#playground {
+	width: 700px; height: 500px;
+	margin: 0 auto;
+	background-color: #d3d1d1;
+}
+
+#box {
+	width: 100px; height: 100px;
+	background-color: blue;
+	position: relative;
+	top: 200px; left: 300px;
+}
+
+li {
+	text-decoration: none;
+	display: inline;
+	position: relative;
+
+}
+#left {
+	float: left;
+	left: 15px;
+}
+#right {
+	float: right;
+	left: -100px;
+}
+
