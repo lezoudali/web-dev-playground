@@ -1,0 +1,47 @@
+<!doctype html> 
+<html>
+<head>
+	<title>CodePlayer</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript" src="./script/codeplayer.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/codeplayer.css">
+		<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="menuBar">
+			<div id="logo">CodePlayer</div>
+
+			<div id="buttonDiv">
+				<button id="runButton"><span>RUN</span></button>
+			</div>
+
+			<ul id="toggles">
+				<li class="selected">HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+				<li class="selected">RESULT</li>
+
+			</ul>
+
+		</div>
+
+		<div id="clear"></div>
+
+		<div class="codeContainer" id="HTMLcode"><div class="codeLabel">HTML</div><textarea id="htmlCode"><div id="clickMe">Click Me<div></textarea></div>
+
+		<div class="codeContainer" id="CSScode"><div class="codeLabel">CSS</div><textarea id="cssCode">#clickMe { width: 60px; height: 45px;border-radius: 100%; background: red; text-align: center; padding-top: 10px}</textarea></div>
+
+		<div class="codeContainer" id="JScode"><div class="codeLabel">JS</div><textarea id="jsCode"> var something = document.getElementById('clickMe'); something.onclick = function() { something.innerHTML = "Thanks";};</textarea></div>
+		
+		<div class="codeContainer" id="RESULTcode"><div class="codeLabel">RESULT</div><iframe id="resultFrame"></iframe></div>
+
+		
+
+
+	</div>
+</body>
+
+</html>

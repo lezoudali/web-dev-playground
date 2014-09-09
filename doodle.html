@@ -3,6 +3,7 @@
 	<head>
 		<title>Sketch</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../jquery.min.js"></script>
 		<style type="text/css">
 			* {
 				font-family: Verdana;
@@ -49,22 +50,22 @@
 
 				$("ul").remove();
 				for (var i = 0; i<width; i++){
-					$("#container").append("<ul></ul>")
+					$("#container").append("<ul></ul>");
 				}
 				for (var i = 0; i<width; i++){
-					$("ul").append("<li></li>")
+					$("ul").append("<li></li>");
 				}
 
 				$("li").css({
 					display: "inline-block",
-					width: "15px", height: "15px",
+					width: "12px", height: "12px",
 					border: "1px solid black",
-					margin: "2px",
+					margin: "0.5px"
 				})
 
 				$("ul").css({
 					margin: "0", 
-					position: "relative", 
+					
 				})
 
 				$("body").css({
